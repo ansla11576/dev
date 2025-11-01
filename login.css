@@ -46,9 +46,10 @@
       margin-top: 15px;
       font-size: 0.9em;
     }
-    .link a {
+
+     .link a {
+
       color: #0073e6;
       text-decoration: none;
       cursor: pointer;
     }
- 
