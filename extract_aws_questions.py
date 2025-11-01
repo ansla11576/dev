@@ -1,4 +1,4 @@
-# extract_aws_questions
+# extract_aws_questions.py
 from PyPDF2 import PdfReader
 import re
 import json
