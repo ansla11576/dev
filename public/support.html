@@ -5,60 +5,7 @@
   <meta charset="UTF-8">
   <title>고객센터 챗봇 - AWS 문제풀이</title>
   <link rel="stylesheet" href="index.css">
-  <style>
-    .chat-container {
-      max-width: 600px;
-      margin: 50px auto;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 20px;
-      background-color: #f9f9f9;
-    }
-
-    .chat-box {
-      height: 300px;
-      overflow-y: auto;
-      border: 1px solid #ddd;
-      padding: 10px;
-      margin-bottom: 10px;
-      background-color: #fff;
-    }
-
-    .chat-message {
-      margin: 5px 0;
-    }
-
-    .user {
-      text-align: right;
-      color: blue;
-    }
-
-    .bot {
-      text-align: left;
-      color: green;
-    }
-
-    input[type="text"] {
-      width: 80%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    button {
-      padding: 10px 15px;
-      margin-left: 5px;
-      background-color: #0078d4;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #005ea2;
-    }
-  </style>
+  <link rel="stylesheet" href="support.css">
 </head>
 <body>
 
@@ -79,14 +26,23 @@
 <main>
   <div class="chat-container">
     <h2>고객센터 챗봇</h2>
+
     <div class="chat-box" id="chat-box">
-      <div class="chat-message bot">안녕하세요! 무엇을 도와드릴까요?</div>
+      <div class="chat-message bot">
+        안녕하세요! 무엇을 도와드릴까요?<br><br>
+        <span class="chat-bubble" onclick="presetQuestion('환불하고 싶어요')">환불 문의</span><br>
+        <span class="chat-bubble" onclick="presetQuestion('시험 예약 방법 알려줘')">시험 예약</span><br>
+        <span class="chat-bubble" onclick="presetQuestion('할인 쿠폰 있어요?')">할인 문의</span>
+      </div>
     </div>
-    <input type="text" id="user-input" placeholder="메시지를 입력하세요..." />
-    <button onclick="sendMessage()">전송</button>
+
+    <div class="input-area">
+      <input type="text" id="user-input" placeholder="메시지를 입력하세요..." />
+      <button onclick="sendMessage()">전송</button>
+    </div>
   </div>
 </main>
-<script src="support.js"></script>
 
+<script src="support.js"></script>
 </body>
 </html>
