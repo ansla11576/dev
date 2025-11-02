@@ -1,0 +1,92 @@
+<!-- support.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>고객센터 챗봇 - AWS 문제풀이</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .chat-container {
+      max-width: 600px;
+      margin: 50px auto;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .chat-box {
+      height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #fff;
+    }
+
+    .chat-message {
+      margin: 5px 0;
+    }
+
+    .user {
+      text-align: right;
+      color: blue;
+    }
+
+    .bot {
+      text-align: left;
+      color: green;
+    }
+
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin-left: 5px;
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005ea2;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <a href="index.html" style="text-decoration: none; color: inherit;">AWS 문제풀이</a>
+  </div>
+  <ul>
+    <li><a href="exam.html">기출문제</a></li>
+    <li><a href="flashcard.html">개념확인</a></li>
+    <li><a href="https://aws.amazon.com/ko/certification/certification-prep/testing/">시험예약</a></li>
+    <li><a href="discount.html">할인</a></li>
+    <li><a href="support.html">고객센터</a></li>
+    <li><a href="login.html">로그인</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="chat-container">
+    <h2>고객센터 챗봇</h2>
+    <div class="chat-box" id="chat-box">
+      <div class="chat-message bot">안녕하세요! 무엇을 도와드릴까요?</div>
+    </div>
+    <input type="text" id="user-input" placeholder="메시지를 입력하세요..." />
+    <button onclick="sendMessage()">전송</button>
+  </div>
+</main>
+<script src="support.js"></script>
+
+</body>
+</html>
